@@ -13,30 +13,38 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" id="top">
-    <div class="header-inner">
-      <a class="brand" href="#top" aria-label="Home">
-        <span class="brand-mark">Crafter</span>
-        <span class="brand-sub">Consolidated Engineering &amp; Sourcing Consultants</span>
-      </a>
-      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-      </button>
+  <div class="site-top" id="top">
+    <div class="site-top-inner">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand" href="#top" aria-label="Home">
+            <span class="brand-mark">Crafter</span>
+            <span class="brand-sub">Consolidated Engineering &amp; Sourcing Consultants</span>
+          </a>
+          <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+          </button>
+        </div>
+      </header>
+      <!-- Sibling of sticky header (not inside it): fixed overlay uses the viewport on iOS/WebKit. -->
       <nav class="site-nav" id="site-nav" aria-label="Primary">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#expertise">Expertise</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#highlights">Highlights</a></li>
-          <li><a href="#industries">Industries</a></li>
-          <li><a href="#contact" class="nav-cta">Contact</a></li>
-        </ul>
+        <div class="site-nav__backdrop" aria-hidden="true"></div>
+        <div class="site-nav__panel">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#contact" class="nav-cta">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
-  </header>
+  </div>
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-heading">

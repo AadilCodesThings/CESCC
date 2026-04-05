@@ -16,6 +16,13 @@
       setOpen(!nav.classList.contains("is-open"));
     });
 
+    var backdrop = nav.querySelector(".site-nav__backdrop");
+    if (backdrop) {
+      backdrop.addEventListener("click", function () {
+        setOpen(false);
+      });
+    }
+
     nav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         if (window.matchMedia("(max-width: 768px)").matches) setOpen(false);
