@@ -398,15 +398,15 @@ a:hover {
 
 @media (min-width: 769px) {
   .site-nav__panel {
-    left: 50%;
-    right: auto;
-    width: min(24rem, calc(100% - 2 * var(--page-pad)));
-    transform: translate(-50%, -120%);
+    left: auto;
+    right: max(var(--page-pad), calc((100vw - var(--max)) / 2 + var(--page-pad)));
+    width: min(22rem, calc(100vw - 2 * var(--page-pad)));
+    transform: translateY(-120%);
     border-radius: 0 0 var(--radius) var(--radius);
   }
 
   .site-nav.is-open .site-nav__panel {
-    transform: translate(-50%, 0);
+    transform: translateY(0);
   }
 }
 
