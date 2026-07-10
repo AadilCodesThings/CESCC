@@ -25,7 +25,7 @@
 
     nav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
-        if (window.matchMedia("(max-width: 768px)").matches) setOpen(false);
+        setOpen(false);
       });
     });
 

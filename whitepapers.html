@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>White Papers | Consolidated Engineering &amp; Sourcing Consultants</title>
+  <meta name="description" content="Technical white papers on MV/HV substations, switchgear, protection, compliance, and EPC strategy from CESCC senior consultants in Dubai.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="site-top" id="top">
+    <div class="site-top-inner">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand" href="index.html" aria-label="Home">
+            <span class="brand-mark">Crafter</span>
+            <span class="brand-sub">Consolidated Engineering &amp; Sourcing Consultants</span>
+          </a>
+          <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+          </button>
+        </div>
+      </header>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <div class="site-nav__backdrop" aria-hidden="true"></div>
+        <div class="site-nav__panel">
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#expertise">Expertise</a></li>
+            <li><a href="index.html#experience">Experience</a></li>
+            <li><a href="index.html#highlights">Highlights</a></li>
+            <li><a href="index.html#industries">Industries</a></li>
+            <li><a href="whitepapers.html" class="is-current" aria-current="page">White papers</a></li>
+            <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="page-hero page-hero--whitepapers" aria-labelledby="whitepapers-page-heading">
+      <div class="container page-hero__inner reveal">
+        <div class="section-heading">
+          <span class="section-icon" aria-hidden="true">
+            <svg class="section-icon__svg" focusable="false"><use href="#i-document"/></svg>
+          </span>
+          <h1 id="whitepapers-page-heading">White papers</h1>
+        </div>
+        <p class="page-hero__lead">In-depth technical briefs on power systems engineering, protection, compliance, and regional execution&mdash;written by senior consultants with decades of MV/HV portfolio leadership.</p>
+      </div>
+    </section>
+
+    <section class="section section--light section-whitepapers-list" aria-labelledby="whitepapers-list-heading">
+      <div class="container">
+        <div class="whitepapers-toolbar reveal">
+          <div class="whitepapers-toolbar__filters">
+            <h2 id="whitepapers-list-heading" class="visually-hidden">Filter white papers by topic</h2>
+            <p class="whitepapers-toolbar__label" id="whitepapers-filter-label">Filter by topic</p>
+            <div class="tag-filters" id="whitepapers-filters" role="group" aria-labelledby="whitepapers-filter-label"></div>
+          </div>
+          <p class="whitepapers-toolbar__count" id="whitepapers-count" aria-live="polite"></p>
+        </div>
+
+        <div class="whitepapers-grid reveal-stagger" id="whitepapers-grid" aria-labelledby="whitepapers-list-heading"></div>
+
+        <p class="whitepapers-empty" id="whitepapers-empty" hidden>No white papers match this topic. Try another filter or view all.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark brand-mark--sm">Crafter</span>
+        <p>Consolidated Engineering &amp; Sourcing Consultants</p>
+      </div>
+      <p class="footer-meta">&copy; <span id="year"></span> CESCC. Dubai, United Arab Emirates.</p>
+    </div>
+  </footer>
+
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <symbol id="i-document" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/>
+      </symbol>
+      <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3.75 13.5 10.5 6.75 9.75 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
+      </symbol>
+    </defs>
+  </svg>
+  <script src="main.js"></script>
+  <script src="whitepapers.js"></script>
+</body>
+</html>

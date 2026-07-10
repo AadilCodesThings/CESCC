@@ -1,0 +1,103 @@
+{
+  "papers": [
+    {
+      "id": "busbar-protection",
+      "title": "Busbar Protection Engineering",
+      "summary": "Compares low-impedance and high-impedance busbar protection schemes, with emphasis on CT performance, stability during external faults, scheme selection, and engineering checks for grid-station design.",
+      "date": "2026-03",
+      "tags": ["Protection", "Substations", "Utilities"],
+      "file": "assets/whitepapers/busbar-protection.pdf",
+      "featured": false
+    },
+    {
+      "id": "condition-based-maintenance-for-grid-stations",
+      "title": "Condition-Based Maintenance for Grid Stations",
+      "summary": "How utilities and industrial owners can move from calendar-based maintenance to risk-based condition maintenance across transformers, switchgear, protection systems, batteries, and auxiliary equipment.",
+      "date": "2026-03",
+      "tags": ["Maintenance", "Substations", "Transformers", "Utilities"],
+      "file": "assets/whitepapers/condition-based-maintenance-for-grid-stations.pdf",
+      "featured": false
+    },
+    {
+      "id": "digital-substation-process-bus",
+      "title": "Digital Substation Process Bus",
+      "summary": "Bay-level process bus engineering: merging units, sampled values, GOOSE-based trip distribution, time synchronization, redundancy, testing philosophy, and retrofit constraints.",
+      "date": "2026-03",
+      "tags": ["Substations", "Communications", "Compliance"],
+      "file": "assets/whitepapers/digital-substation-process-bus.pdf",
+      "featured": false
+    },
+    {
+      "id": "iec-61850-grid-stations",
+      "title": "IEC 61850 for Grid Stations",
+      "summary": "Engineering IEC 61850 for new and retrofit grid stations: station-bus philosophy, logical node allocation, interoperability, cyber and timing considerations, and migration sequencing.",
+      "date": "2026-03",
+      "tags": ["Compliance", "Substations", "Utilities"],
+      "file": "assets/whitepapers/iec-61850-grid-stations.pdf",
+      "featured": true
+    },
+    {
+      "id": "instrument-transformer-applications",
+      "title": "CT, VT, and CVT Selection for Grid Stations",
+      "summary": "Instrument transformer application in grid stations: CT class selection, VT and CVT considerations, burden calculations, saturation limits, transient performance, and scheme suitability.",
+      "date": "2026-03",
+      "tags": ["Protection", "Substations", "Utilities"],
+      "file": "assets/whitepapers/instrument-transformer-applications.pdf",
+      "featured": false
+    },
+    {
+      "id": "mv-reactor",
+      "title": "Air-Core Series Reactors for MV Short-Circuit Duty",
+      "summary": "Engineering approach for evaluating air-core single-phase series reactors to reduce prospective short-circuit duty on medium-voltage switchgear, based on IEC-oriented analysis.",
+      "date": "2026-03",
+      "tags": ["MV/HV", "Switchgear", "Engineering"],
+      "file": "assets/whitepapers/mv-reactor.pdf",
+      "featured": false
+    },
+    {
+      "id": "substation-arc-flash-mitigation",
+      "title": "Substation Arc-Flash Mitigation",
+      "summary": "Engineering methods to reduce arc-flash exposure in substations and industrial switchgear: protection speed, arc-resistant equipment strategy, remote operation, and zonal interlocking.",
+      "date": "2026-03",
+      "tags": ["Protection", "Substations", "MV/HV"],
+      "file": "assets/whitepapers/substation-arc-flash-mitigation.pdf",
+      "featured": true
+    },
+    {
+      "id": "substation-upgrade-and-retrofit-engineering",
+      "title": "Substation Upgrade and Retrofit Engineering",
+      "summary": "Practical brownfield substation upgrades: relay retrofit, control replacement, switchgear retention decisions, outage planning, and fault-level constraints.",
+      "date": "2026-03",
+      "tags": ["Substations", "EPC", "Utilities"],
+      "file": "assets/whitepapers/substation-upgrade-and-retrofit-engineering.pdf",
+      "featured": false
+    },
+    {
+      "id": "teleprotection-and-utility-communications",
+      "title": "Teleprotection and Utility Communications",
+      "summary": "Engineering utility communication channels for line protection and transfer-trip functions: path selection, latency, redundancy, and migration from legacy to packet-based networks.",
+      "date": "2026-03",
+      "tags": ["Protection", "Communications", "Utilities"],
+      "file": "assets/whitepapers/teleprotection-and-utility-communications.pdf",
+      "featured": false
+    },
+    {
+      "id": "transformer-condition-monitoring",
+      "title": "Transformer Online Condition Monitoring",
+      "summary": "Engineering transformer monitoring beyond isolated sensors by combining DGA, bushings, OLTC, loading, thermal models, and maintenance workflows into a practical asset-health program.",
+      "date": "2026-03",
+      "tags": ["Transformers", "Maintenance", "Utilities"],
+      "file": "assets/whitepapers/transformer-condition-monitoring.pdf",
+      "featured": false
+    },
+    {
+      "id": "transformer-protection-philosophy",
+      "title": "Power Transformer Protection Philosophy",
+      "summary": "How a complete transformer protection philosophy should be structured across primary, backup, and abnormal-condition functions for grid stations and industrial substations.",
+      "date": "2026-03",
+      "tags": ["Protection", "Transformers", "Substations"],
+      "file": "assets/whitepapers/transformer-protection-philosophy.pdf",
+      "featured": true
+    }
+  ]
+}
