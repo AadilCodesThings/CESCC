@@ -1534,11 +1534,11 @@ a:hover {
 
 .contact-form-wrap {
   min-width: 0;
-  background: var(--color-surface);
+  background: rgba(255, 255, 255, 0.8);
   padding: 1.75rem;
-  border-radius: 0;
+  border-radius: 12px;
   border: 1px solid var(--color-border);
-  box-shadow: none;
+  box-shadow: var(--shadow-sm);
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-medium);
 }
 
