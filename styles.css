@@ -19,7 +19,7 @@
   --color-dark-link-hover: #bfdbfe;
   --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
   --font-serif: "Libre Baskerville", Georgia, "Times New Roman", serif;
-  --radius: 2px;
+  --radius: 10px;
   --shadow: 0 1px 2px rgba(28, 25, 23, 0.06);
   --shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.05);
   --shadow-md: 0 8px 24px rgba(28, 25, 23, 0.08);
@@ -240,10 +240,10 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(240, 240, 240, 0.82);
-  border-bottom: 1px solid rgba(212, 208, 200, 0.85);
-  backdrop-filter: blur(12px) saturate(1.1);
-  -webkit-backdrop-filter: blur(12px) saturate(1.1);
+  background: rgba(247, 246, 242, 0.78);
+  border-bottom: 1px solid rgba(212, 208, 200, 0.7);
+  backdrop-filter: blur(16px) saturate(1.15);
+  -webkit-backdrop-filter: blur(16px) saturate(1.15);
 }
 
 .header-inner {
@@ -562,26 +562,27 @@ a:hover {
 
 .hero-art-frame {
   position: relative;
-  width: 80%;
-  max-width: 100%;
+  width: 100%;
+  max-width: 22rem;
   margin-inline: auto;
   overflow: hidden;
   background: var(--color-hero-bg);
-  aspect-ratio: 2 / 3;
-  max-height: min(72vh, 38rem);
+  /* Let the full poster show — cover+zoom was clipping the CRAFTER wordmark in the artwork */
+  aspect-ratio: auto;
+  max-height: none;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
 }
 
 .hero-art-frame img {
-  position: absolute;
-  inset: 0;
+  position: static;
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 34%;
-  transform: scale(1.07);
-  transform-origin: 50% 34%;
-  border-radius: 0;
+  height: auto;
+  object-fit: contain;
+  object-position: center top;
+  transform: none;
+  border-radius: 12px;
   box-shadow: none;
 }
 
@@ -602,14 +603,13 @@ a:hover {
   }
 
   .hero-art-frame {
-    width: 80%;
-    max-height: min(64vh, 32rem);
+    width: min(100%, 20rem);
+    max-height: none;
   }
 
   .hero-art-frame img {
-    object-position: 50% 32%;
-    transform: scale(1.06);
-    transform-origin: 50% 32%;
+    object-position: center top;
+    transform: none;
   }
 }
 
@@ -980,10 +980,11 @@ a:hover {
 .principal-card {
   margin-top: 2rem;
   padding: 1.5rem 1.5rem;
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.72);
   border: 1px solid var(--color-border);
   border-left: 3px solid var(--color-accent);
-  border-radius: 0;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
   transition: box-shadow var(--transition-fast), transform var(--transition-medium);
 }
 
@@ -1016,11 +1017,11 @@ a:hover {
   margin: 0;
   padding: 1.5rem 1.4rem;
   min-width: 0;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.72);
   border: 1px solid var(--color-border);
-  border-top: 2px solid var(--color-accent);
-  border-radius: 0;
-  box-shadow: none;
+  border-top: 3px solid var(--color-accent);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-medium), background var(--transition-fast);
 }
 
@@ -1029,7 +1030,7 @@ a:hover {
   border-top-color: var(--color-accent-hover);
   box-shadow: var(--shadow-md);
   transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.92);
 }
 
 .service-card h3 {
@@ -1600,27 +1601,30 @@ a:hover {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 0;
+  gap: 0.75rem;
   counter-reset: process;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 0;
 }
 
 .process-step {
   margin: 0;
   padding: 1.5rem 1.15rem 1.65rem;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
   min-width: 0;
   position: relative;
-  transition: background var(--transition-fast);
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-medium);
 }
 
 .process-step:last-child {
-  border-right: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .process-step:hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(253, 186, 116, 0.35);
+  transform: translateY(-2px);
 }
 
 .process-step__num {
@@ -1655,16 +1659,16 @@ a:hover {
   }
 
   .process-step {
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .process-step:nth-child(2n) {
-    border-right: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .process-step:nth-last-child(-n + 2) {
-    border-bottom: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
 }
 
@@ -1674,58 +1678,159 @@ a:hover {
   }
 
   .process-step {
-    border-right: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .process-step:last-child {
-    border-bottom: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
 }
 
-/* Project experience */
-.project-list {
+/* Project experience — filterable card grid */
+.project-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.75rem;
+}
+
+.project-filter {
+  appearance: none;
+  margin: 0;
+  padding: 0.45rem 0.9rem;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-text-muted);
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.project-filter:hover {
+  color: var(--color-text);
+  border-color: #a8a29e;
+}
+
+.project-filter.is-active {
+  color: #fff;
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.project-filter:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.project-grid {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 0;
-  border-top: 1px solid var(--color-border);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-.project-list li {
+@media (max-width: 960px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
   margin: 0;
-  padding: 1.15rem 0 1.15rem 0;
-  border-bottom: 1px solid var(--color-border);
-  background: transparent;
-  font-size: 0.975rem;
-  line-height: 1.6;
-  color: var(--color-text);
-  display: grid;
-  grid-template-columns: 2.5rem minmax(0, 1fr);
-  gap: 0.75rem;
-  align-items: start;
-  transition: color var(--transition-fast), padding-left var(--transition-medium);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 1.35rem 1.25rem 1.25rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  min-width: 0;
+  transition: transform var(--transition-medium), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
-.project-list {
-  counter-reset: project;
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: #c4bfb6;
 }
 
-.project-list li::before {
-  counter-increment: project;
-  content: counter(project, decimal-leading-zero);
+.project-card.is-hidden {
+  display: none;
+}
+
+.project-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 0.75rem;
+}
+
+.project-card__metric {
   font-family: var(--font-serif);
-  font-size: 0.8125rem;
+  font-size: 1.125rem;
   font-weight: 700;
   color: var(--color-accent);
-  letter-spacing: 0.04em;
-  padding-top: 0.15rem;
+  letter-spacing: -0.01em;
 }
 
-.project-list li:hover {
+.project-card__place {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.project-card__title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
   color: var(--color-text);
-  padding-left: 0.35rem;
+}
+
+.project-card__body {
+  margin: 0;
+  flex: 1;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.project-card__tag {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: 0.25rem;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent-hover);
+  background: rgba(180, 83, 9, 0.1);
+  border-radius: 999px;
+}
+
+.projects-empty {
+  margin: 0 0 1rem;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
 }
 
 .projects-note {
@@ -1796,8 +1901,10 @@ a:hover {
 .leadership-team {
   padding: 1.5rem 1.5rem;
   border: 1px solid var(--color-border);
-  border-top: 2px solid var(--color-accent);
-  background: rgba(255, 255, 255, 0.45);
+  border-top: 3px solid var(--color-accent);
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
   height: 100%;
 }
 
@@ -1839,16 +1946,24 @@ a:hover {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
-  gap: 1px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  gap: 1rem;
+  background: transparent;
+  border: 0;
 }
 
 .why-list li {
   margin: 0;
   padding: 1.6rem 1.35rem;
-  border: 0;
-  background: rgba(28, 27, 25, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-medium);
+}
+
+.why-list li:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(253, 186, 116, 0.35);
+  transform: translateY(-2px);
 }
 
 .why-list h3 {

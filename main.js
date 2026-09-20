@@ -2,6 +2,30 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
+  var projectFilters = document.querySelectorAll(".project-filter");
+  var projectCards = document.querySelectorAll(".project-card");
+  var projectsEmpty = document.getElementById("projects-empty");
+  if (projectFilters.length && projectCards.length) {
+    projectFilters.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var filter = btn.getAttribute("data-filter") || "all";
+        projectFilters.forEach(function (other) {
+          var active = other === btn;
+          other.classList.toggle("is-active", active);
+          other.setAttribute("aria-pressed", active ? "true" : "false");
+        });
+        var visible = 0;
+        projectCards.forEach(function (card) {
+          var tags = (card.getAttribute("data-tags") || "").split(/\s+/);
+          var show = filter === "all" || tags.indexOf(filter) !== -1;
+          card.classList.toggle("is-hidden", !show);
+          if (show) visible += 1;
+        });
+        if (projectsEmpty) projectsEmpty.hidden = visible > 0;
+      });
+    });
+  }
+
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("site-nav");
   if (toggle && nav) {

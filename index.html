@@ -172,25 +172,154 @@
             <span class="section-kicker">Projects</span>
             <h2 id="projects-heading">Project experience</h2>
           </div>
-          <p class="section-intro">Selected CESC project descriptions. Client names and references are available on request under NDA.</p>
+          <p class="section-intro">Selected CESC engagements across renewables, thermal power and MV/LV distribution. Client names and references available on request under NDA.</p>
         </header>
-        <ul class="project-list reveal-stagger">
-          <li>12&nbsp;MWp solar PV plant, Horn of Africa &mdash; 33&nbsp;kV collection system engineering, switchgear and RMU specification and supply, BOQ development and vendor document review.</li>
-          <li>16&nbsp;MW hybrid PV, battery storage and HFO power plant, East Africa &mdash; feasibility study, HFO engine sizing and plant configuration for a commercial developer.</li>
-          <li>Port and free zone power infrastructure, East Africa &mdash; 11&nbsp;kV switchgear, ring main units, automatic transfer switches and distribution transformers for a port operator.</li>
-          <li>20&nbsp;MW solar PV plant, Bangladesh &mdash; complete supply BOQ for an industrial captive plant, including inverters, transformers, MV switchgear and balance of plant, EXW China.</li>
-          <li>Container terminal MV/LV distribution, Bangladesh &mdash; tender BOQ engineering and pricing for a global terminal operator.</li>
-          <li>21&nbsp;MW HFO power plant, Central Africa &mdash; engine route evaluation covering new and relocated units and commercial structuring for a rental power operator.</li>
-          <li>Distribution transformer supply programme, Cameroon &mdash; multi-type distribution transformer bid for a national utility programme.</li>
-          <li>33&nbsp;kV AIS switchgear, Saudi Arabia &mdash; BOQ and vendor qualification to national utility approved vendor requirements for an industrial park.</li>
-          <li>13.8&nbsp;kV MV distribution for a high-rise development, Saudi Arabia &mdash; MV switchgear, transformers and distribution BOQ.</li>
-          <li>Mobile substation for a 25&nbsp;MW wind project, Jordan &mdash; BOQ development and competitive benchmarking.</li>
-          <li>Network rehabilitation programme, Sudan &mdash; large-scale MV/LV rehabilitation BOQ for a utility development company.</li>
-          <li>60&nbsp;MW HFO power plant, Yemen &mdash; EXW switchgear and transformer package.</li>
-          <li>MV/LV distribution quotation, St. Kitts &mdash; complete distribution equipment package for an island utility.</li>
-          <li>Off-grid solar, battery and inverter system for a 40-villa compound, Sharjah, UAE.</li>
-          <li>Embassy backup power and LV distribution, Chad &mdash; transformer, breaker and busbar scope from client single-line diagram.</li>
+        <div class="project-toolbar reveal" role="group" aria-label="Filter projects by type">
+          <button type="button" class="project-filter is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="project-filter" data-filter="renewables" aria-pressed="false">Renewables</button>
+          <button type="button" class="project-filter" data-filter="thermal" aria-pressed="false">Thermal</button>
+          <button type="button" class="project-filter" data-filter="distribution" aria-pressed="false">Distribution</button>
+          <button type="button" class="project-filter" data-filter="middle-east" aria-pressed="false">Middle East</button>
+          <button type="button" class="project-filter" data-filter="africa" aria-pressed="false">Africa</button>
+        </div>
+        <ul class="project-grid reveal-stagger" id="project-grid">
+          <li class="project-card" data-tags="renewables africa">
+            <div class="project-card__meta">
+              <span class="project-card__metric">12 MWp</span>
+              <span class="project-card__place">Horn of Africa</span>
+            </div>
+            <h3 class="project-card__title">Solar PV plant — 33&nbsp;kV collection</h3>
+            <p class="project-card__body">Collection system engineering, switchgear and RMU specification and supply, BOQ development and vendor document review.</p>
+            <span class="project-card__tag">Renewables</span>
+          </li>
+          <li class="project-card" data-tags="renewables thermal africa">
+            <div class="project-card__meta">
+              <span class="project-card__metric">16 MW</span>
+              <span class="project-card__place">East Africa</span>
+            </div>
+            <h3 class="project-card__title">Hybrid PV, BESS and HFO plant</h3>
+            <p class="project-card__body">Feasibility study, HFO engine sizing and plant configuration for a commercial developer.</p>
+            <span class="project-card__tag">Hybrid</span>
+          </li>
+          <li class="project-card" data-tags="distribution africa">
+            <div class="project-card__meta">
+              <span class="project-card__metric">11 kV</span>
+              <span class="project-card__place">East Africa</span>
+            </div>
+            <h3 class="project-card__title">Port and free zone power</h3>
+            <p class="project-card__body">Switchgear, ring main units, automatic transfer switches and distribution transformers for a port operator.</p>
+            <span class="project-card__tag">Distribution</span>
+          </li>
+          <li class="project-card" data-tags="renewables">
+            <div class="project-card__meta">
+              <span class="project-card__metric">20 MW</span>
+              <span class="project-card__place">Bangladesh</span>
+            </div>
+            <h3 class="project-card__title">Industrial captive solar PV</h3>
+            <p class="project-card__body">Complete supply BOQ including inverters, transformers, MV switchgear and balance of plant, EXW China.</p>
+            <span class="project-card__tag">Renewables</span>
+          </li>
+          <li class="project-card" data-tags="distribution">
+            <div class="project-card__meta">
+              <span class="project-card__metric">MV/LV</span>
+              <span class="project-card__place">Bangladesh</span>
+            </div>
+            <h3 class="project-card__title">Container terminal distribution</h3>
+            <p class="project-card__body">Tender BOQ engineering and pricing for a global terminal operator.</p>
+            <span class="project-card__tag">Distribution</span>
+          </li>
+          <li class="project-card" data-tags="thermal africa">
+            <div class="project-card__meta">
+              <span class="project-card__metric">21 MW</span>
+              <span class="project-card__place">Central Africa</span>
+            </div>
+            <h3 class="project-card__title">HFO power plant — engine route</h3>
+            <p class="project-card__body">Engine route evaluation covering new and relocated units and commercial structuring for a rental power operator.</p>
+            <span class="project-card__tag">Thermal</span>
+          </li>
+          <li class="project-card" data-tags="distribution africa">
+            <div class="project-card__meta">
+              <span class="project-card__metric">Utility</span>
+              <span class="project-card__place">Cameroon</span>
+            </div>
+            <h3 class="project-card__title">Distribution transformer programme</h3>
+            <p class="project-card__body">Multi-type distribution transformer bid for a national utility programme.</p>
+            <span class="project-card__tag">Distribution</span>
+          </li>
+          <li class="project-card" data-tags="distribution middle-east">
+            <div class="project-card__meta">
+              <span class="project-card__metric">33 kV</span>
+              <span class="project-card__place">Saudi Arabia</span>
+            </div>
+            <h3 class="project-card__title">AIS switchgear — industrial park</h3>
+            <p class="project-card__body">BOQ and vendor qualification to national utility approved vendor requirements.</p>
+            <span class="project-card__tag">Switchgear</span>
+          </li>
+          <li class="project-card" data-tags="distribution middle-east">
+            <div class="project-card__meta">
+              <span class="project-card__metric">13.8 kV</span>
+              <span class="project-card__place">Saudi Arabia</span>
+            </div>
+            <h3 class="project-card__title">High-rise MV distribution</h3>
+            <p class="project-card__body">MV switchgear, transformers and distribution BOQ for a high-rise development.</p>
+            <span class="project-card__tag">Distribution</span>
+          </li>
+          <li class="project-card" data-tags="renewables middle-east">
+            <div class="project-card__meta">
+              <span class="project-card__metric">25 MW</span>
+              <span class="project-card__place">Jordan</span>
+            </div>
+            <h3 class="project-card__title">Mobile substation — wind project</h3>
+            <p class="project-card__body">BOQ development and competitive benchmarking for a mobile substation package.</p>
+            <span class="project-card__tag">Renewables</span>
+          </li>
+          <li class="project-card" data-tags="distribution africa">
+            <div class="project-card__meta">
+              <span class="project-card__metric">MV/LV</span>
+              <span class="project-card__place">Sudan</span>
+            </div>
+            <h3 class="project-card__title">Network rehabilitation programme</h3>
+            <p class="project-card__body">Large-scale MV/LV rehabilitation BOQ for a utility development company.</p>
+            <span class="project-card__tag">Distribution</span>
+          </li>
+          <li class="project-card" data-tags="thermal middle-east">
+            <div class="project-card__meta">
+              <span class="project-card__metric">60 MW</span>
+              <span class="project-card__place">Yemen</span>
+            </div>
+            <h3 class="project-card__title">HFO plant — EXW package</h3>
+            <p class="project-card__body">EXW switchgear and transformer package for a 60&nbsp;MW HFO power plant.</p>
+            <span class="project-card__tag">Thermal</span>
+          </li>
+          <li class="project-card" data-tags="distribution">
+            <div class="project-card__meta">
+              <span class="project-card__metric">Island</span>
+              <span class="project-card__place">St. Kitts</span>
+            </div>
+            <h3 class="project-card__title">Island utility MV/LV package</h3>
+            <p class="project-card__body">Complete distribution equipment package for an island utility.</p>
+            <span class="project-card__tag">Distribution</span>
+          </li>
+          <li class="project-card" data-tags="renewables middle-east">
+            <div class="project-card__meta">
+              <span class="project-card__metric">Off-grid</span>
+              <span class="project-card__place">Sharjah, UAE</span>
+            </div>
+            <h3 class="project-card__title">Villa compound solar and storage</h3>
+            <p class="project-card__body">Off-grid solar, battery and inverter system for a 40-villa compound.</p>
+            <span class="project-card__tag">Renewables</span>
+          </li>
+          <li class="project-card" data-tags="distribution africa">
+            <div class="project-card__meta">
+              <span class="project-card__metric">LV</span>
+              <span class="project-card__place">Chad</span>
+            </div>
+            <h3 class="project-card__title">Embassy backup power</h3>
+            <p class="project-card__body">Transformer, breaker and busbar scope from client single-line diagram.</p>
+            <span class="project-card__tag">Distribution</span>
+          </li>
         </ul>
+        <p class="projects-empty" id="projects-empty" hidden>No projects match this filter.</p>
         <p class="projects-note reveal">Client names and references available on request under NDA.</p>
       </div>
     </section>
