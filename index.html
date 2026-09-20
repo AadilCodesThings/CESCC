@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="has-video-hero">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <div class="site-top" id="top">
@@ -49,8 +49,14 @@
   </div>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-split">
+    <section class="hero hero--video" aria-labelledby="hero-heading">
+      <div class="hero-video" aria-hidden="true">
+        <video class="hero-video__media" autoplay muted loop playsinline poster="assets/photos/hero-substation.jpg" preload="metadata">
+          <source src="assets/video/hero-grid.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-video__scrim" aria-hidden="true"></div>
+      <div class="hero-split hero-split--solo">
         <div class="hero-content">
           <p class="hero-brand" aria-hidden="true">CESC</p>
           <p class="hero-eyebrow">Power Systems &middot; EPC &middot; Equipment Supply &middot; Dubai</p>
@@ -58,12 +64,7 @@
           <p class="hero-lead">Dubai-based engineers delivering MV/HV substations, switchgear, transformers, renewable and thermal power packages across the Middle East, Africa and South Asia. From single-line diagram to energisation.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#contact">Send us your BOQ</a>
-            <a class="btn btn-ghost" href="https://wa.me/971526586583?text=Hello%2C%20I%27d%20like%20to%20inquire%20about%20CESC%20services." target="_blank" rel="noopener noreferrer">Talk to an engineer on WhatsApp</a>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="hero-art-frame">
-            <img src="assets/hero-brand.png" width="800" height="1200" alt="Power substation and electrical infrastructure illustration for CESC" decoding="async" fetchpriority="high">
+            <a class="btn btn-ghost btn-ghost--on-video" href="https://wa.me/971526586583?text=Hello%2C%20I%27d%20like%20to%20inquire%20about%20CESC%20services." target="_blank" rel="noopener noreferrer">Talk to an engineer on WhatsApp</a>
           </div>
         </div>
       </div>
@@ -651,7 +652,13 @@
           <ul class="contact-details">
             <li><a href="mailto:msk@cesc-consult.com">msk@cesc-consult.com</a></li>
             <li><a href="tel:+971526586583">+971 52 658 6583</a></li>
-            <li><span class="contact-location">Dubai &mdash; UAE</span></li>
+            <li>
+              <address class="contact-location">
+                Meydan Grandstand, 6th Floor<br>
+                Meydan Road, Nad Al Sheba<br>
+                Dubai, U.A.E 11500
+              </address>
+            </li>
             <li><a href="https://www.cesc-consult.com" rel="noopener">www.cesc-consult.com</a></li>
           </ul>
           <a class="btn btn-whatsapp" href="https://wa.me/971526586583?text=Hello%2C%20I%27d%20like%20to%20inquire%20about%20CESC%20services." target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
@@ -682,6 +689,13 @@
           </form>
         </div>
       </div>
+      <div class="container">
+        <div class="contact-seal" aria-hidden="true">
+          <div class="contact-brand-art">
+            <img src="assets/hero-brand.png" width="800" height="1200" alt="" decoding="async" loading="lazy">
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -692,7 +706,7 @@
         <p>Consolidated Engineering &amp; Sourcing Consultants</p>
       </div>
       <div class="footer-meta-block">
-        <p class="footer-meta">&copy; <span id="year"></span> CESC. Dubai, United Arab Emirates.</p>
+        <p class="footer-meta">&copy; <span id="year"></span> CESC. Meydan Grandstand, Nad Al Sheba, Dubai, U.A.E.</p>
       </div>
     </div>
   </footer>

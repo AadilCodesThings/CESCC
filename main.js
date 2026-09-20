@@ -85,4 +85,27 @@
       });
     });
   }
+
+  var header = document.querySelector(".site-header");
+  var videoHero = document.querySelector(".hero--video");
+  if (header && videoHero && document.body.classList.contains("has-video-hero")) {
+    function syncHeader() {
+      var past = window.scrollY > Math.max(24, videoHero.offsetHeight * 0.35);
+      header.classList.toggle("is-solid", past);
+    }
+    syncHeader();
+    window.addEventListener("scroll", syncHeader, { passive: true });
+
+    var video = videoHero.querySelector(".hero-video__media");
+    if (video) {
+      var tryPlay = function () {
+        var playPromise = video.play();
+        if (playPromise && typeof playPromise.catch === "function") {
+          playPromise.catch(function () {});
+        }
+      };
+      tryPlay();
+      video.addEventListener("loadeddata", tryPlay);
+    }
+  }
 })();

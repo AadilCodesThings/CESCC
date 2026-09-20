@@ -348,11 +348,196 @@ a:hover {
 
 /* Hero: two columns, thin rule between copy and image (no card wrapper) */
 .hero {
+  position: relative;
   padding: calc(clamp(2.5rem, 6vw, 4.5rem) + env(safe-area-inset-top, 0px)) var(--page-pad) clamp(3rem, 6vw, 4.75rem);
   /* Match the poster field so the artwork doesn’t read as a floating card */
   background: #ffffff;
   border-bottom: 1px solid var(--color-border);
   overflow: clip;
+}
+
+/* Video-bg experiment: same hero content, motion underneath */
+.hero--video {
+  isolation: isolate;
+  background: #1c1917;
+  border-bottom: none;
+  min-height: min(92vh, 52rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: calc(var(--header-h) + clamp(1.5rem, 4vw, 3rem) + env(safe-area-inset-top, 0px));
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-video__media {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-video__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  /* Dense left column for type; open right so video colour still reads */
+  background:
+    linear-gradient(
+      105deg,
+      rgba(8, 7, 6, 0.88) 0%,
+      rgba(8, 7, 6, 0.72) 28%,
+      rgba(8, 7, 6, 0.42) 48%,
+      rgba(8, 7, 6, 0.16) 68%,
+      rgba(8, 7, 6, 0.06) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(8, 7, 6, 0.55) 0%,
+      rgba(8, 7, 6, 0.2) 18%,
+      transparent 42%,
+      transparent 78%,
+      rgba(8, 7, 6, 0.35) 100%
+    );
+}
+
+.hero--video .hero-split {
+  position: relative;
+  z-index: 2;
+}
+
+.hero--video .hero-split--solo {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: var(--max);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero--video .hero-content {
+  padding-right: 0;
+  max-width: 36rem;
+}
+
+.hero--video .hero-brand {
+  color: #fdba74;
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.55);
+}
+
+.hero--video .hero-eyebrow {
+  color: rgba(250, 250, 249, 0.88);
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.5);
+}
+
+.hero--video .hero-title {
+  color: #ffffff;
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.55);
+}
+
+.hero--video .hero-lead {
+  color: rgba(255, 255, 255, 0.94);
+  text-shadow: 0 1px 18px rgba(0, 0, 0, 0.5);
+}
+
+.hero--video .hero-lead strong {
+  color: #ffffff;
+}
+
+.btn-ghost--on-video {
+  color: #fafaf9 !important;
+  border-color: rgba(250, 250, 249, 0.55);
+  background: rgba(250, 250, 249, 0.08);
+}
+
+.btn-ghost--on-video:hover {
+  color: #fff !important;
+  border-color: #fff;
+  background: rgba(250, 250, 249, 0.16);
+}
+
+/* Video hero: nav floats over the frame, transparent until scroll */
+.has-video-hero .site-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  height: 0;
+}
+
+.has-video-hero .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  border-bottom-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.has-video-hero .site-header .brand-mark {
+  color: #fdba74;
+  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.45);
+}
+
+.has-video-hero .site-header .brand-sub {
+  color: rgba(250, 250, 249, 0.82);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
+}
+
+.has-video-hero .site-header .nav-toggle {
+  background: rgba(250, 250, 249, 0.08);
+  border-color: rgba(250, 250, 249, 0.4);
+}
+
+.has-video-hero .site-header .nav-toggle-bar {
+  background: #fafaf9;
+}
+
+.has-video-hero .site-header.is-solid {
+  background: rgba(247, 246, 242, 0.94);
+  border-bottom-color: rgba(212, 208, 200, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.has-video-hero .site-header.is-solid .brand-mark {
+  color: var(--color-accent);
+  text-shadow: none;
+}
+
+.has-video-hero .site-header.is-solid .brand-sub {
+  color: var(--color-text-muted);
+  text-shadow: none;
+}
+
+.has-video-hero .site-header.is-solid .nav-toggle {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+.has-video-hero .site-header.is-solid .nav-toggle-bar {
+  background: var(--color-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video__media {
+    display: none;
+  }
+
+  .hero--video {
+    background:
+      linear-gradient(rgba(247, 246, 242, 0.72), rgba(247, 246, 242, 0.72)),
+      url("assets/photos/hero-substation.jpg") center / cover;
+  }
 }
 
 .hero-split {
@@ -1984,6 +2169,26 @@ a:hover {
   margin-top: 0;
 }
 
+.contact-seal {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(2.75rem, 6vw, 4rem);
+  padding-top: clamp(2rem, 4vw, 2.75rem);
+  border-top: 1px solid var(--color-border);
+}
+
+.contact-brand-art {
+  width: min(11.5rem, 42vw);
+  margin-inline: auto;
+}
+
+.contact-brand-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
+
 .contact-details {
   list-style: none;
   margin: 1.5rem 0;
@@ -2000,8 +2205,11 @@ a:hover {
 }
 
 .contact-location {
-  color: var(--color-link);
-  font-weight: 600;
+  display: block;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--color-text);
 }
 
 .contact-form-wrap {
