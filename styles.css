@@ -1,4 +1,5 @@
-/* CESC - one-page layout */
+/* CESC - one-page layout
+   design/ge-type: GE-inspired type only (all-sans + weight hierarchy); CESC colours unchanged */
 :root {
   --color-bg: #ebe8e1;
   /* Pulled from hero artwork (PHOTO-2026-02-22-21-52-08) so the image sits on the same field */
@@ -17,8 +18,10 @@
   --color-dark-muted: #c4c0b8;
   --color-dark-link: #93c5fd;
   --color-dark-link-hover: #bfdbfe;
-  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
-  --font-serif: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  /* Single geometric sans — weight does the pairing work (GE pattern) */
+  --font-sans: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --radius: 10px;
   --shadow: 0 1px 2px rgba(28, 25, 23, 0.06);
   --shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.05);
@@ -59,7 +62,7 @@ body {
   margin: 0;
   font-family: var(--font-sans);
   font-size: 1.0625rem;
-  line-height: 1.65;
+  line-height: 1.7;
   color: var(--color-text);
   background-color: var(--color-bg);
   background-image:
@@ -168,11 +171,11 @@ a:hover {
 }
 
 .brand-mark {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(1.35rem, 3vw, 1.65rem);
   font-weight: 700;
   color: var(--color-accent);
-  letter-spacing: 0.02em;
+  letter-spacing: -0.02em;
   line-height: 1.1;
 }
 
@@ -372,11 +375,11 @@ a:hover {
 
 .hero-brand {
   margin: 0 0 0.85rem;
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(2.75rem, 7vw, 4.75rem);
   font-weight: 700;
   line-height: 0.95;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.035em;
   color: var(--color-accent);
 }
 
@@ -394,10 +397,11 @@ a:hover {
 
 .hero-title {
   margin: 0 0 1.15rem;
-  font-family: var(--font-serif);
-  font-size: clamp(1.2rem, 1.6vw + 0.85rem, 1.85rem);
-  font-weight: 700;
-  line-height: 1.28;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 1.8vw + 0.9rem, 2rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
   color: var(--color-text);
   max-width: 28ch;
   overflow-wrap: break-word;
@@ -409,8 +413,9 @@ a:hover {
   margin: 0 0 2rem;
   color: var(--color-text-muted);
   font-size: 1.0625rem;
+  font-weight: 400;
   max-width: 38rem;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 .hero-lead strong {
@@ -598,11 +603,11 @@ a:hover {
 }
 
 .proof-strip strong {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(1.05rem, 2.2vw, 1.25rem);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-text);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   line-height: 1.2;
 }
 
@@ -763,6 +768,13 @@ a:hover {
 
 .about-cinema__heading {
   margin-bottom: 1.25rem;
+}
+
+.about-cinema h2,
+.section-cinema h2,
+.about-cinema .section-heading h2,
+.section-cinema .section-heading h2 {
+  color: var(--color-dark-text);
 }
 
 .about-cinema .lead,
@@ -929,7 +941,9 @@ a:hover {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.section--dark h2 {
+.section--dark h2,
+.section--dark .section-heading h2,
+.section--dark .section-head .section-heading h2 {
   color: var(--color-dark-text);
 }
 
@@ -996,11 +1010,12 @@ a:hover {
 
 .section h2 {
   margin: 0 0 1.25rem;
-  font-family: var(--font-serif);
-  font-size: clamp(1.65rem, 2.4vw + 0.9rem, 2.35rem);
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 2.6vw + 0.95rem, 2.5rem);
+  font-weight: 600;
   line-height: 1.2;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
   max-width: 100%;
   overflow-wrap: break-word;
   word-break: break-word;
@@ -1011,11 +1026,12 @@ a:hover {
 .section-head .section-heading h2,
 .section-heading h2 {
   margin: 0;
-  font-family: var(--font-serif);
-  font-size: clamp(1.65rem, 2.4vw + 0.9rem, 2.35rem);
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 2.6vw + 0.95rem, 2.5rem);
+  font-weight: 600;
   line-height: 1.2;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
 }
 
 .section-head {
@@ -1082,7 +1098,8 @@ a:hover {
   margin: 0;
   max-width: 40rem;
   font-size: 1.0625rem;
-  line-height: 1.65;
+  font-weight: 400;
+  line-height: 1.75;
   color: var(--color-text-muted);
 }
 
@@ -1398,9 +1415,10 @@ a:hover {
 }
 
 .lead {
-  font-size: 1.2rem;
-  line-height: 1.65;
-  color: var(--color-text);
+  font-size: 1.15rem;
+  line-height: 1.75;
+  font-weight: 400;
+  color: var(--color-text-muted);
   max-width: 48rem;
 }
 
