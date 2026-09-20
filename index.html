@@ -69,10 +69,23 @@
       </div>
     </section>
 
-    <section class="section section--dark section-about" id="about" aria-labelledby="about-heading">
-      <div class="container">
-        <div class="">
-          <div class="section-heading">
+    <section class="proof-strip" aria-label="Capability highlights">
+      <div class="container proof-strip__inner">
+        <p><strong>13.8–380&nbsp;kV</strong> <span>substations &amp; switchgear</span></p>
+        <p><strong>3 regions</strong> <span>Middle East · Africa · South Asia</span></p>
+        <p><strong>Westinghouse LV</strong> <span>licensed EMEA partner</span></p>
+        <p><strong>30+ years</strong> <span>OEM &amp; plant engineering</span></p>
+      </div>
+    </section>
+
+    <section class="about-cinema section--dark" id="about" aria-labelledby="about-heading">
+      <div class="about-cinema__media" aria-hidden="true">
+        <img src="assets/photos/hero-substation.jpg" width="1600" height="1067" alt="" decoding="async" fetchpriority="low">
+      </div>
+      <div class="about-cinema__veil" aria-hidden="true"></div>
+      <div class="about-cinema__content">
+        <div class="container">
+          <div class="section-heading about-cinema__heading">
             <span class="section-kicker">About</span>
             <h2 id="about-heading">Who we are</h2>
           </div>
@@ -92,41 +105,110 @@
           </div>
           <p class="section-intro">Engineering, licensed product supply, EPC execution and thermal power&mdash;scoped for utilities, EPCs, developers and industrial clients.</p>
         </div>
-        <figure class="deliver-banner">
-          <img src="assets/photos/services-banner.jpg" width="1600" height="1065" alt="Utility-scale solar array under sky, representing grid and renewable integration" decoding="async" loading="lazy">
-        </figure>
-        <ul class="deliver-grid">
-          <li class="deliver-item">
-            <span class="deliver-item__index" aria-hidden="true">01</span>
-            <h3>Equipment supply and sourcing</h3>
-            <p>Power and distribution transformers, MV and LV switchgear, ring main units, packaged and compact substations, low voltage panels, circuit breakers and spares. We qualify manufacturers, review designs against the specification, witness factory acceptance tests and manage delivery to site in the region.</p>
-          </li>
-          <li class="deliver-item">
-            <span class="deliver-item__index" aria-hidden="true">02</span>
-            <h3>Westinghouse LV &mdash; licensed partner</h3>
-            <p>CESC holds the Westinghouse LVMB licence covering EMEA, CIS, the United Kingdom and Australia. We supply Westinghouse low voltage circuit breakers and assemblies, support licensed local assemblers and provide type-tested LV solutions.</p>
-          </li>
-          <li class="deliver-item">
-            <span class="deliver-item__index" aria-hidden="true">03</span>
-            <h3>Power systems engineering</h3>
-            <p>Substation design from 13.8&nbsp;kV to 380&nbsp;kV, switchgear specification, system studies, protection philosophy and relay coordination, earthing and short circuit studies, and engineering review of vendor documents.</p>
-          </li>
-          <li class="deliver-item">
-            <span class="deliver-item__index" aria-hidden="true">04</span>
-            <h3>EPC and project execution</h3>
-            <p>Bid preparation, engineering procurement and construction strategy, subcontractor management, testing and commissioning supervision and energisation support for substations, distribution networks and power plants.</p>
-          </li>
-          <li class="deliver-item">
-            <span class="deliver-item__index" aria-hidden="true">05</span>
-            <h3>Renewable energy and storage</h3>
-            <p>Solar PV plants, battery energy storage systems and hybrid PV, storage and thermal plants. Scope covers MV collection systems, inverter and transformer stations, grid connection, BESS integration and EXW or delivered packages.</p>
-          </li>
-          <li class="deliver-item">
-            <span class="deliver-item__index" aria-hidden="true">06</span>
-            <h3>Thermal and rental power</h3>
-            <p>Feasibility, engine selection and sourcing of new and used HFO, diesel and dual-fuel generating sets from single units to multi-unit plants in the tens of megawatts, including containerised rental power.</p>
-          </li>
-        </ul>
+        <div class="deliver-explorer" data-deliver-explorer>
+          <article class="deliver-item is-open">
+            <h3 class="deliver-item__heading">
+              <button type="button" class="deliver-item__trigger" aria-expanded="true" id="deliver-trigger-0" aria-controls="deliver-panel-0">
+                <span class="deliver-item__label">Equipment supply and sourcing</span>
+                <span class="deliver-item__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="deliver-item__panel" id="deliver-panel-0" role="region" aria-labelledby="deliver-trigger-0">
+              <div class="deliver-item__media">
+                <img src="assets/photos/hero-substation.jpg" width="1600" height="1067" alt="High-voltage transmission infrastructure representing utility equipment supply" decoding="async">
+              </div>
+              <div class="deliver-item__copy">
+                <p class="deliver-item__title">Equipment supply and sourcing</p>
+                <p class="deliver-item__body">Power and distribution transformers, MV and LV switchgear, ring main units, packaged and compact substations, low voltage panels, circuit breakers and spares. We qualify manufacturers, review designs against the specification, witness factory acceptance tests and manage delivery to site in the region.</p>
+              </div>
+            </div>
+          </article>
+          <article class="deliver-item">
+            <h3 class="deliver-item__heading">
+              <button type="button" class="deliver-item__trigger" aria-expanded="false" id="deliver-trigger-1" aria-controls="deliver-panel-1">
+                <span class="deliver-item__label">Westinghouse LV — licensed partner</span>
+                <span class="deliver-item__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="deliver-item__panel" id="deliver-panel-1" role="region" aria-labelledby="deliver-trigger-1" hidden>
+              <div class="deliver-item__media">
+                <img src="assets/photos/experience-grid.jpg" width="1600" height="1068" alt="Field engineer working on electrical equipment and LV assemblies" decoding="async" loading="lazy">
+              </div>
+              <div class="deliver-item__copy">
+                <p class="deliver-item__title">Westinghouse LV — licensed partner</p>
+                <p class="deliver-item__body">CESC holds the Westinghouse LVMB licence covering EMEA, CIS, the United Kingdom and Australia. We supply Westinghouse low voltage circuit breakers and assemblies, support licensed local assemblers and provide type-tested LV solutions.</p>
+              </div>
+            </div>
+          </article>
+          <article class="deliver-item">
+            <h3 class="deliver-item__heading">
+              <button type="button" class="deliver-item__trigger" aria-expanded="false" id="deliver-trigger-2" aria-controls="deliver-panel-2">
+                <span class="deliver-item__label">Power systems engineering</span>
+                <span class="deliver-item__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="deliver-item__panel" id="deliver-panel-2" role="region" aria-labelledby="deliver-trigger-2" hidden>
+              <div class="deliver-item__media">
+                <img src="assets/photos/engineer-switchgear.jpg" width="1600" height="1067" alt="Engineering review of technical drawings and power system documentation" decoding="async" loading="lazy">
+              </div>
+              <div class="deliver-item__copy">
+                <p class="deliver-item__title">Power systems engineering</p>
+                <p class="deliver-item__body">Substation design from 13.8&nbsp;kV to 380&nbsp;kV, switchgear specification, system studies, protection philosophy and relay coordination, earthing and short circuit studies, and engineering review of vendor documents.</p>
+              </div>
+            </div>
+          </article>
+          <article class="deliver-item">
+            <h3 class="deliver-item__heading">
+              <button type="button" class="deliver-item__trigger" aria-expanded="false" id="deliver-trigger-3" aria-controls="deliver-panel-3">
+                <span class="deliver-item__label">EPC and project execution</span>
+                <span class="deliver-item__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="deliver-item__panel" id="deliver-panel-3" role="region" aria-labelledby="deliver-trigger-3" hidden>
+              <div class="deliver-item__media">
+                <img src="assets/photos/industrial-plant.jpg" width="1600" height="1067" alt="Industrial power plant and project execution environment" decoding="async" loading="lazy">
+              </div>
+              <div class="deliver-item__copy">
+                <p class="deliver-item__title">EPC and project execution</p>
+                <p class="deliver-item__body">Bid preparation, engineering procurement and construction strategy, subcontractor management, testing and commissioning supervision and energisation support for substations, distribution networks and power plants.</p>
+              </div>
+            </div>
+          </article>
+          <article class="deliver-item">
+            <h3 class="deliver-item__heading">
+              <button type="button" class="deliver-item__trigger" aria-expanded="false" id="deliver-trigger-4" aria-controls="deliver-panel-4">
+                <span class="deliver-item__label">Renewable energy and storage</span>
+                <span class="deliver-item__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="deliver-item__panel" id="deliver-panel-4" role="region" aria-labelledby="deliver-trigger-4" hidden>
+              <div class="deliver-item__media">
+                <img src="assets/photos/solar-desert.jpg" width="2000" height="1499" alt="Utility-scale solar photovoltaic array" decoding="async" loading="lazy">
+              </div>
+              <div class="deliver-item__copy">
+                <p class="deliver-item__title">Renewable energy and storage</p>
+                <p class="deliver-item__body">Solar PV plants, battery energy storage systems and hybrid PV, storage and thermal plants. Scope covers MV collection systems, inverter and transformer stations, grid connection, BESS integration and EXW or delivered packages.</p>
+              </div>
+            </div>
+          </article>
+          <article class="deliver-item">
+            <h3 class="deliver-item__heading">
+              <button type="button" class="deliver-item__trigger" aria-expanded="false" id="deliver-trigger-5" aria-controls="deliver-panel-5">
+                <span class="deliver-item__label">Thermal and rental power</span>
+                <span class="deliver-item__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="deliver-item__panel" id="deliver-panel-5" role="region" aria-labelledby="deliver-trigger-5" hidden>
+              <div class="deliver-item__media">
+                <img src="assets/photos/services-banner.jpg" width="1600" height="1065" alt="Power generation and thermal energy infrastructure" decoding="async" loading="lazy">
+              </div>
+              <div class="deliver-item__copy">
+                <p class="deliver-item__title">Thermal and rental power</p>
+                <p class="deliver-item__body">Feasibility, engine selection and sourcing of new and used HFO, diesel and dual-fuel generating sets from single units to multi-unit plants in the tens of megawatts, including containerised rental power.</p>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -503,25 +585,31 @@
       </div>
     </section>
 
-    <section class="section section--dark section-industries" id="industries" aria-labelledby="industries-heading">
-      <div class="container">
-        <div class="section-head">
-          <div class="section-heading">
-            <span class="section-kicker">Markets</span>
-            <h2 id="industries-heading">Industries served</h2>
+    <section class="section-cinema section--dark section-industries" id="industries" aria-labelledby="industries-heading">
+      <div class="section-cinema__media" aria-hidden="true">
+        <img src="assets/photos/region-uae-desert-lines.jpg" width="2000" height="1333" alt="" decoding="async" loading="lazy">
+      </div>
+      <div class="section-cinema__veil" aria-hidden="true"></div>
+      <div class="section-cinema__content">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-heading">
+              <span class="section-kicker">Markets</span>
+              <h2 id="industries-heading">Industries served</h2>
+            </div>
           </div>
-        </div>
-        <ul class="industry-tags">
-          <li>National utilities &amp; transmission operators</li>
-          <li>Oil &amp; gas refineries</li>
-          <li>Industrial &amp; heavy manufacturing</li>
-          <li>Water &amp; wastewater infrastructure</li>
-          <li>Commercial &amp; high-rise developments</li>
-          <li>Renewable energy &amp; grid interconnection</li>
-        </ul>
-        <div class="regions">
-          <h3 class="h3-quiet">Regional presence</h3>
-          <p>UAE &middot; Jordan &middot; Egypt &middot; KSA &middot; Morocco &middot; Algeria &middot; Sub-Saharan Africa &middot; Pakistan &middot; Bangladesh</p>
+          <ul class="industry-tags">
+            <li>National utilities &amp; transmission operators</li>
+            <li>Oil &amp; gas refineries</li>
+            <li>Industrial &amp; heavy manufacturing</li>
+            <li>Water &amp; wastewater infrastructure</li>
+            <li>Commercial &amp; high-rise developments</li>
+            <li>Renewable energy &amp; grid interconnection</li>
+          </ul>
+          <div class="regions">
+            <h3 class="h3-quiet">Regional presence</h3>
+            <p>UAE &middot; Jordan &middot; Egypt &middot; KSA &middot; Morocco &middot; Algeria &middot; Sub-Saharan Africa &middot; Pakistan &middot; Bangladesh</p>
+          </div>
         </div>
       </div>
     </section>

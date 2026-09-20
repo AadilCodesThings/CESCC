@@ -57,4 +57,32 @@
       if (e.key === "Escape") setOpen(false);
     });
   }
+
+  var explorer = document.querySelector("[data-deliver-explorer]");
+  if (explorer) {
+    var items = explorer.querySelectorAll(".deliver-item");
+
+    function openItem(target) {
+      items.forEach(function (item) {
+        var on = item === target;
+        var trigger = item.querySelector(".deliver-item__trigger");
+        var panel = item.querySelector(".deliver-item__panel");
+        item.classList.toggle("is-open", on);
+        if (trigger) trigger.setAttribute("aria-expanded", on ? "true" : "false");
+        if (panel) {
+          if (on) panel.removeAttribute("hidden");
+          else panel.setAttribute("hidden", "");
+        }
+      });
+    }
+
+    items.forEach(function (item) {
+      var trigger = item.querySelector(".deliver-item__trigger");
+      if (!trigger) return;
+      trigger.addEventListener("click", function () {
+        if (item.classList.contains("is-open")) return;
+        openItem(item);
+      });
+    });
+  }
 })();
