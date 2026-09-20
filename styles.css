@@ -1,4 +1,4 @@
-/* CESCC / Crafter - one-page layout */
+/* CESC - one-page layout */
 :root {
   --color-bg: #ebe8e1;
   /* Pulled from hero artwork (PHOTO-2026-02-22-21-52-08) so the image sits on the same field */
@@ -875,7 +875,7 @@ a:hover {
     grid-row: 1 / span 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: repeat(3, auto);
     gap: 1.25rem;
   }
 }
@@ -1528,12 +1528,215 @@ a:hover {
   min-height: 8rem;
 }
 
+/* How we work */
+.process-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr));
+  gap: 1.25rem;
+}
+
+.process-step {
+  margin: 0;
+  padding: 1.25rem 1.15rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  min-width: 0;
+}
+
+.process-step__num {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #fdba74;
+  margin-bottom: 0.65rem;
+}
+
+.process-step h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fafaf9;
+}
+
+.process-step p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #d6d3cd;
+  line-height: 1.55;
+}
+
+/* Project experience */
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.project-list li {
+  margin: 0;
+  padding: 1rem 1.15rem 1rem 1.35rem;
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+.projects-note {
+  margin: 1.5rem 0 0;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Standards */
+.standards-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.standards-list li {
+  margin: 0;
+  padding: 1rem 1.15rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: #d6d3cd;
+}
+
+.standards-list li::before {
+  content: "";
+  display: inline-block;
+  width: 0.45rem;
+  height: 0.45rem;
+  margin-right: 0.65rem;
+  background: #fdba74;
+  vertical-align: 0.15em;
+}
+
+/* Leadership */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 1.5rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 800px) {
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.leadership-card {
+  margin-top: 0;
+}
+
+.leadership-bio {
+  margin: 0.85rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+.leadership-team {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.leadership-team h3 {
+  margin: 0 0 0.65rem;
+  font-size: 1.0625rem;
+}
+
+.leadership-team p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+.leadership-foundation__intro {
+  margin-bottom: 1.25rem;
+}
+
+.experience-org-grid--compact {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+}
+
+@media (min-width: 720px) {
+  .experience-org-grid--compact {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  }
+
+  .experience-org-grid--compact .experience-org-card:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+}
+
+/* Why CESC */
+.why-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1.25rem;
+}
+
+.why-list li {
+  margin: 0;
+  padding: 1.35rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.why-list h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1.0625rem;
+  color: #fdba74;
+}
+
+.why-list p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: #d6d3cd;
+  line-height: 1.55;
+}
+
 /* Footer */
 .site-footer {
   padding: 2rem var(--page-pad);
   border-top: 1px solid #3f3e3b;
   background: #141312;
   color: #e7e5e4;
+}
+
+.footer-meta-block {
+  max-width: 24rem;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .footer-meta-block {
+    text-align: left;
+  }
 }
 
 .footer-inner {
