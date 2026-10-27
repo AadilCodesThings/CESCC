@@ -108,4 +108,95 @@
       video.addEventListener("loadeddata", tryPlay);
     }
   }
+
+  document.querySelectorAll("[data-case-carousel]").forEach(function (root) {
+    var thumbs = Array.prototype.slice.call(root.querySelectorAll("[data-carousel-index]"));
+    var image = root.querySelector(".case-carousel__image");
+    var currentEl = root.querySelector("[data-carousel-current]");
+    var totalEl = root.querySelector("[data-carousel-total]");
+    var prevBtn = root.querySelector("[data-carousel-prev]");
+    var nextBtn = root.querySelector("[data-carousel-next]");
+    var stage = root.querySelector(".case-carousel__stage");
+    if (!thumbs.length || !image) return;
+
+    var index = 0;
+    var total = thumbs.length;
+    var touchX = null;
+    if (totalEl) totalEl.textContent = String(total);
+
+    function show(nextIndex) {
+      index = (nextIndex + total) % total;
+      var thumb = thumbs[index];
+      var src = thumb.getAttribute("data-src");
+      var alt = thumb.getAttribute("data-alt") || "";
+      var position = thumb.getAttribute("data-position") || "center 55%";
+
+      image.classList.add("is-fading");
+      window.setTimeout(function () {
+        image.src = src;
+        image.alt = alt;
+        image.style.objectPosition = position;
+        image.classList.remove("is-fading");
+      }, 140);
+
+      thumbs.forEach(function (btn, i) {
+        var on = i === index;
+        btn.classList.toggle("is-active", on);
+        btn.setAttribute("aria-selected", on ? "true" : "false");
+        btn.tabIndex = on ? 0 : -1;
+      });
+      if (currentEl) currentEl.textContent = String(index + 1);
+    }
+
+    thumbs.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        show(Number(btn.getAttribute("data-carousel-index")) || 0);
+      });
+    });
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        show(index - 1);
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        show(index + 1);
+      });
+    }
+
+    root.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        show(index - 1);
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        show(index + 1);
+      }
+    });
+
+    if (stage) {
+      stage.addEventListener(
+        "touchstart",
+        function (e) {
+          touchX = e.changedTouches[0].clientX;
+        },
+        { passive: true }
+      );
+      stage.addEventListener(
+        "touchend",
+        function (e) {
+          if (touchX == null) return;
+          var dx = e.changedTouches[0].clientX - touchX;
+          touchX = null;
+          if (Math.abs(dx) < 40) return;
+          show(dx < 0 ? index + 1 : index - 1);
+        },
+        { passive: true }
+      );
+    }
+
+    root.setAttribute("tabindex", "0");
+    show(0);
+  });
 })();
