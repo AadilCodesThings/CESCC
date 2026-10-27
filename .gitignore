@@ -2,3 +2,5 @@
 *.log
 .!*
 assets/whitepapers/*.docx
+
+.venv-img/
